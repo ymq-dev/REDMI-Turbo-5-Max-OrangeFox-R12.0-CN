@@ -1,0 +1,2 @@
+e8c37606d30f41bc25384c5a948901f974f6d480b286e71227e7c76194b7a56f  OrangeFox-R12.0-Unofficial-dash.img
+2d7dbd73f157d2968591f0170b4cd962b6dbe3995dededffce5af8169431821d  OrangeFox-R12.0-Unofficial-dash-AOSP-Lineage-Installer.zip
