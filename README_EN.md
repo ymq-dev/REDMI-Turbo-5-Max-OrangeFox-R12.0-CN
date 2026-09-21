@@ -185,6 +185,17 @@ New props:  vendor.mslgrootfs.isready  vendor.mslg.rootfs.version  persist.vendo
 
 ---
 
+## 📥 Download
+
+| Source | Link | Note |
+|:---|:---|:---|
+| 🐙 **GitHub Releases** | [R12.0-dash-v1.1-cn](https://github.com/ymq-dev/REDMI-Turbo-5-Max-OrangeFox-R12.0-CN/releases/tag/R12.0-dash-v1.1-cn) | Official release (recommended) |
+| ☁️ **123 Cloud Drive** | [Download](https://1828915014.share.123pan.cn/123pan/pI67jv-CM6Rv?pwd=1hLY) | Access code: `1hLY` |
+
+> Both sources host the same image. Verify the SHA256 below after downloading.
+
+---
+
 ## 📦 Package Contents
 
 | File | Description |
