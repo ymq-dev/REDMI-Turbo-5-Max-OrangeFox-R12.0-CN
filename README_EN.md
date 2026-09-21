@@ -26,10 +26,16 @@ This is not a simple repack. All changes come from a **kernel baseline switch pl
 |---|---|---|
 | Target device | POCO X8 Pro Max (dash) | **Redmi Turbo 5 Max (dash)** |
 | Firmware baseline | HyperOS `OS3.0.303.0.WPLIDXM` (global) | **HyperOS `OS3.0.305.0.WPLCNXM` (cn)** |
-| Build date | 2026-08-06 | **2026-07-02** |
-| Security patch | 2026-08-01 | 2026-02-01 |
+| Firmware build date | 2026-08-06 | 2026-07-02 |
+| **Adaptation build date** | — | **2026-09-22** |
+| Security patch | 2026-08-01 | **2026-06-01** |
 | Radio region | `ro.vendor.radio.build_region=global` | **`=cn`** |
 | CPU ABI | 64-bit only `arm64-v8a` | **includes 32-bit `armeabi-v7a,armeabi`** |
+
+> **Measured on the target device** (Redmi Turbo 5 Max / `2602BRT18C` / dash, used to calibrate the table above):
+> `ro.build.version.security_patch` = `2026-06-01`　`ro.vendor.build.security_patch` = `2026-02-01`
+> `ro.build.version.incremental` = `OS3.0.305.0.WPLCNXM`　`ro.build.date` = `Thu Jul 2 22:40:54 CST 2026`
+> Note: the "security patch 2026-06-01" above is the on-device value; the `prop.default` inside the image carries a base value of `2026-02-01`, which is overridden by an upper layer after boot.
 
 ### 1.1 Kernel modules (272 `.ko`, the bulk of the diff)
 
@@ -59,7 +65,7 @@ Affected partitions: `system`, `system_ext`, `vendor`, `product`, `mi_ext`, `odm
 ### 1.3 System properties `prop.default`
 
 - Build fingerprint → `OS3.0.305.0.WPLCNXM` (system / vendor / odm / product / system_ext)
-- Security patch → `2026-02-01`
+- Security patch → `ro.build.version.security_patch` = **`2026-06-01`** (matches the measured value on the target Redmi Turbo 5 Max), `ro.vendor.build.security_patch` = `2026-02-01`
 - **32-bit ABI added**: `ro.*.product.cpu.abilist` now includes `armeabi-v7a,armeabi`, plus new `ro.bionic.2nd_arch=arm` and `dalvik.vm.isa.arm.variant=cortex-a55`
 - Radio region → `cn`
 

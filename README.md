@@ -28,10 +28,16 @@
 |---|---|---|
 | 目标机型 | POCO X8 Pro Max (dash) | **Redmi Turbo 5 Max (dash)** |
 | 固件基线 | HyperOS `OS3.0.303.0.WPLIDXM`（global） | **HyperOS `OS3.0.305.0.WPLCNXM`（cn）** |
-| 构建日期 | 2026-08-06 | **2026-07-02** |
-| 安全补丁 | 2026-08-01 | 2026-02-01 |
+| 固件编译日 | 2026-08-06 | 2026-07-02 |
+| **适配构建日** | — | **2026-09-22** |
+| 安全补丁 | 2026-08-01 | **2026-06-01** |
 | 无线区域 | `ro.vendor.radio.build_region=global` | **`=cn`** |
 | CPU ABI | 仅 64 位 `arm64-v8a` | **含 32 位 `armeabi-v7a,armeabi`** |
+
+> **目标机实测值**（Redmi Turbo 5 Max / `2602BRT18C` / dash，用于校准上表）：
+> `ro.build.version.security_patch` = `2026-06-01`　`ro.vendor.build.security_patch` = `2026-02-01`
+> `ro.build.version.incremental` = `OS3.0.305.0.WPLCNXM`　`ro.build.date` = `Thu Jul 2 22:40:54 CST 2026`
+> 注：上表中的「安全补丁 2026-06-01」取自设备实测；镜像内 `prop.default` 写入的基值为 `2026-02-01`，设备启动后由更上层覆盖。
 
 ### 1. 内核模块（272 个 `.ko`，占差异主体）
 
@@ -61,7 +67,7 @@ system /system erofs ro wait,slotselect,avb=vbmeta_system,logical,first_stage_mo
 ### 3. 系统属性 `prop.default`
 
 - 构建指纹 → `OS3.0.305.0.WPLCNXM`（system / vendor / odm / product / system_ext 五处）
-- 安全补丁 → `2026-02-01`
+- 安全补丁 → `ro.build.version.security_patch` = **`2026-06-01`**（与目标机 Redmi Turbo 5 Max 实测一致），`ro.vendor.build.security_patch` = `2026-02-01`
 - **新增 32 位 ABI 支持**：`ro.*.product.cpu.abilist` 补上 `armeabi-v7a,armeabi`，并新增 `ro.bionic.2nd_arch=arm`、`dalvik.vm.isa.arm.variant=cortex-a55`
 - 无线区域 → `cn`
 

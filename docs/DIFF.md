@@ -121,7 +121,7 @@
 | `ro.system.build.date.utc` | `1785996375` | `1783003244` |
 | `ro.*.build.fingerprint` | `...:OS3.0.303.0.WPLIDXM:user/release-keys` | `...:OS3.0.305.0.WPLCNXM:user/release-keys` |
 | `ro.*.build.version.incremental` | `OS3.0.303.0.WPLIDXM` | `OS3.0.305.0.WPLCNXM` |
-| `ro.build.version.security_patch` | `2026-08-01` | `2026-02-01` |
+| `ro.build.version.security_patch` | `2026-08-01` | `2026-02-01`（镜像内值）<br>目标机实测 `2026-06-01` |
 | `ro.vendor.build.security_patch` | `2026-08-01` | `2026-02-01` |
 | `ro.build.host` | `pangu-build-component-vendor-1043906-41w58-rdk84-qvw23` | `pangu-build-component-vendor-1002712-2pqgt-txkqg-kx6bn` |
 | `ro.system.product.cpu.abilist` | `arm64-v8a` | `arm64-v8a,armeabi-v7a,armeabi` |
