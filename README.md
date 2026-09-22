@@ -191,7 +191,6 @@ ro.build.date                   = Thu Jul 2 22:40:54 CST 2026
 |:---|:---|:---|
 | 🐙 **GitHub Releases** | [R12.0-dash-v1.1-cn](https://github.com/ymq-dev/REDMI-Turbo-5-Max-OrangeFox-R12.0-CN/releases/tag/R12.0-dash-v1.1-cn) | 本仓库正式发布（推荐） |
 
-> 两个渠道为同一镜像文件，下载后请核对下方 SHA256。
 
 ---
 
